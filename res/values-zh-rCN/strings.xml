@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">超级微信</string>
+    <string name="app_name">福利社</string>
     <string name="text_ack_msg">已读</string>
     <string name="text_delivered_msg">送达</string>
     <string name="back">返回</string>
@@ -73,9 +73,12 @@
     <string name="yangshengqi">使用扬声器播放语音</string>
     <string name="book_black">通讯录黑名单</string>
     <string name="session">会话</string>
+    <string name="message">消息</string>
     <string name="address_book">通讯录</string>
+    <string name="contact_list">好友</string>
     <string name="setting">设置</string>
     <string name="now_refresh_list">正在刷新联系人</string>
+    <string name="now_refresh">刷新中...</string>
     <string name="Application_and_notify">申请与通知</string>
     <string name="save_new_nickname">保存</string>
     <string name="nickname_description">设置此昵称以后，在与iOS客户端demo聊天过程中，iOS一侧会显示此昵称而不是环信ID，如果对方使用安卓客户端则此设置不生效</string>
@@ -110,7 +113,7 @@
     <string name="login">登录</string>
     <string name="user_name">用户名</string>
     <string name="password">密码</string>
-    <string name="register">注册</string>
+    <string name="register">免费注册</string>
     <string name="confirmpassword">确认密码</string>
     <string name="downwaiting">正在下载文件请稍后</string>
     <string name="mute">静音</string>
@@ -201,6 +204,7 @@
     <string name="Video_footage">拍摄录像</string>
     <string name="User_name_cannot_be_empty">用户名不能为空！</string>
     <string name="User_name_cannot_be_wd">用户名只能为数字字母下划线！</string>
+
     <string name="Password_cannot_be_empty">密码不能为空！</string>
     <string name="please_set_the_current">设置当前用户的昵称\n用于ios离线推送时显示用户昵称</string>
     <string name="Is_landing">正在登录...</string>
@@ -216,8 +220,10 @@
     <string name="Logoff_notification">下线通知</string>
     <string name="Remove_the_notification">移除通知</string>
     <string name="Group_name_cannot_be_empty">群组名称不能为空</string>
+
     <string name="Is_to_create_a_group_chat">正在创建群聊...</string>
     <string name="Failed_to_create_groups">创建群组失败:</string>
+
     <string name="The_video_to_start">录像开始</string>
     <string name="Whether_to_send">是否发送？</string>
     <string name="Open_the_equipment_failure">打开设备失败!</string>
@@ -295,6 +301,7 @@
     <string name="robot_chat">环信小助手</string>
     <string name="title_user_profile">个人资料</string>
     <string name="nickname">昵称</string>
+
     <string name="dl_title_upload_photo">上传头像</string>
     <string name="dl_msg_local_upload">本地上传</string>
     <string name="dl_msg_take_photo">拍照上传</string>
@@ -360,4 +367,31 @@
     <string name="msg_503">用户更新地理位置成功</string>
     <string name="msg_504">用户更新地理位置失败</string>
     <string name="msg_999">未知错误</string>
+    
+    
+    
+       <!-- 支付的字符串资源 -->
+    <string name="prompt_pay_falied">可能因为网络过于繁忙</string>
+    <string name="copyright">支付接入由Ping++提供</string>
+    <string name="title_test_activity">壹收款</string>
+    <string name="title_activity_pay">支付</string>
+    <string name="title_activity_pay_sucessed">支付成功</string>
+    <string name="title_activity_pay_filed">支付失败</string>
+    <string name="title_activity_success">支付成功</string>
+    <string name="create_bill">成功下单</string>
+    <string name="label_bill_name">订单号</string>
+    <string name="label_amount">总金额</string>
+    <string name="title_activity_pay_failed">支付失败</string>
+    <string name="pay_failed">支付失败</string>
+    <string name="back_activity_pay">再试一次</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechar">微信支付</string>
+    <string name="bfb">百度钱包</string>
+    <string name="upmp">银联支付</string>
+	<string name="continue_buy">继续购物</string>
+    <string name="generic_server_down">远端服务器关闭</string>
+    <string name="no_internet">网络异常</string>
+    <string name="generic_error">下载失败</string>
+    <string name="share">分享</string>
+    <string name="user_qrcode">我的二维码</string>
 </resources>
