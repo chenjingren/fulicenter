@@ -61,8 +61,6 @@ public class SplashActivity extends BaseActivity {
             User user = dao.findUserByUserName(username);
             SuperWeChatApplication.getInstance().setUser(user);
             new DownloadContactListTask(mContext,username).execute();
-           /* new DownloadAllGroupTask(mContext,username).execute();
-            new DownloadPublicGroupTask(mContext,username, I.PAGE_ID_DEFAULT,I.PAGE_SIZE_DEFAULT).execute();*/
 		}
 
 		new Thread(new Runnable() {
@@ -83,20 +81,21 @@ public class SplashActivity extends BaseActivity {
 							e.printStackTrace();
 						}
 					}
-					//进入主页面
+					/*//进入主页面
 					startActivity(new Intent(SplashActivity.this, MainActivity.class));
-					finish();
+					finish();*/
 				}else {
 					try {
 						Thread.sleep(sleepTime);
 					} catch (InterruptedException e) {
 					}
-					startActivity(new Intent(SplashActivity.this, LoginActivity.class));
-					finish();
+					/*startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+					finish();*/
 				}
+				startActivity(new Intent(SplashActivity.this,FuLiCenterMainActivity.class));
+				finish();
 			}
 		}).start();
-
 	}
 	
 	/**
