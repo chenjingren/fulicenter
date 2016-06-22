@@ -2,17 +2,7 @@ package cn.ucai.fulicenter;
 
 public interface I {
 
- /**页号*//*
-    public static final String PAGE_ID="page_id";
-    
-    *//**每页加载的数据*//*
-    public static final String PAGE_SIZE="page_size";*/
-    /** 上传图片的类型：user_avatar或group_icon*/
-    /*public static final String AVATAR_TYPE="avatarType";*/
     public static final String FILE_NAME="file_name";
-    
-   /* public static final int PAGE_ID_DEFAULT = 0;
-    public static final int PAGE_SIZE_DEFAULT = 10;*/
 
     public static final int REQUEST_CODE_LOGIN = 1;
     public static final int ACTIVITY_REGISTER_REQUEST_CODE = 2;
@@ -191,31 +181,7 @@ public interface I {
 		String CU_ID 								= 		"m_contact_cid";				//好友id
 		String CU_NAME 								= 		"m_contact_cname";				//好友账号
 	}
-	
-	interface Group {
-		String TABLE_NAME 							= 		"t_superwechat_group";
-		String GROUP_ID 							= 		"m_group_id";					// 主键
-		String HX_ID 								= 		"m_group_hxid";					//环信群组id
-		String NAME 								= 		"m_group_name";					//群组名称
-		String DESCRIPTION 							= 		"m_group_description";			//群组简介
-		String OWNER 								= 		"m_group_owner";				//群组所有者－用户账号
-		String MODIFIED_TIME 						= 		"m_group_last_modified_time";	//最后修改时间
-		String MAX_USERS 							= 		"m_group_max_users";			//最大人数
-		String AFFILIATIONS_COUNT 					= 		"m_group_affiliations_count";	//群组人数
-		String IS_PUBLIC 							= 		"m_group_is_public";			//群组是否公开
-		String ALLOW_INVITES 						= 		"m_group_allow_invites";		//是否可以邀请
-	}
-	
-	interface Member {
-		String TABLE_NAME 							= 		"t_superwechat_member";
-		String MEMBER_ID 							= 		"m_member_id";					//主键
-		String USER_ID 								= 		"m_member_user_id";				//用户id
-		String USER_NAME 							= 		"m_member_user_name";			//用户账号
-		String GROUP_ID 							= 		"m_member_group_id";			//群组id
-		String GROUP_HX_ID 							= 		"m_member_group_hxid";			//群组环信id
-		String PERMISSION 							= 		"m_member_permission";			//用户对群组的权限\n0:普通用户\n1:群组所有者
-	}
-	
+
 	interface Avatar {
 		String TABLE_NAME 							= 		"t_superwechat_avatar";
 		String AVATAR_ID 							= 		"m_avatar_id";					//主键
@@ -224,17 +190,7 @@ public interface I {
 		String AVATAR_PATH 							= 		"m_avatar_path";				//保存路径
 		String AVATAR_TYPE 							= 		"m_avatar_type";				//头像类型：\n0:用户头像\n1:群组头像
 	}
-	
-	interface Location {
-		String TABLE_NAME 							= 		"t_superwechat_location";
-		String LOCATION_ID 							= 		"m_location_id";				//主键
-		String USER_ID 								= 		"m_location_user_id";			//用户id
-		String USER_NAME 							= 		"m_location_user_name";			//用户账号
-		String LATITUDE 							= 		"m_location_latitude";			//纬度
-		String LONGITUDE 							= 		"m_location_longitude";			//经度
-		String IS_SEARCHED 							= 		"m_location_is_searched";		//是否可以被搜索到
-		String UPDATE_TIME 							= 		"m_location_last_update_time";	//最后更新时间
-	}
+
 public enum ActionType {
         ACTION_DOWNLOAD, ACTION_PULL_DOWN, ACTION_SCROLL
     }    
@@ -337,8 +293,8 @@ public enum ActionType {
 	String REQUEST_LOGIN 							= 		"login";
 	/** 客户端发送的下载用户头像请求 */
 	String REQUEST_DOWNLOAD_AVATAR	 				= 		"download_avatar";
-	/** 客户端发送的下载群组头像请求 */
-	String REQUEST_DOWNLOAD_GROUP_AVATAR 			= 		"download_group_avatar";
+	/** 客户端发送的下载群组头像请求 *//*
+	String REQUEST_DOWNLOAD_GROUP_AVATAR 			= 		"download_group_avatar";*/
 	/** 客户端发送的下载联系人请求 */
 	String REQUEST_DOWNLOAD_CONTACTS			 	= 		"download_contacts";
 	/** 客户端发送的下载联系人所有集合请求 */
@@ -359,53 +315,53 @@ public enum ActionType {
 	String REQUEST_FIND_USERS_FOR_SEARCH			= 		"find_users_for_search";
 	/** 客户端发送的下载联系人请求 */
 	String REQUEST_DOWNLOAD_CONTACT 				= 		"download_contacts";
-	/** 客户端发送的上传位置请求 */
+	/** 客户端发送的上传位置请求 *//*
 	String REQUEST_UPLOAD_LOCATION 					= 		"upload_location";
-	/** 客户端发送的更新位置请求 */
+	*//** 客户端发送的更新位置请求 *//*
 	String REQUEST_UPDATE_LOCATION 					= 		"update_location";
-	/** 客户端发送的下载位置请求 */
+	*//** 客户端发送的下载位置请求 *//*
 	String REQUEST_DOWNLOAD_LOCATION 				= 		"download_location";
-	/** 客户端发送的创建群组请求 */
+	*//** 客户端发送的创建群组请求 *//*
 	String REQUEST_CREATE_GROUP			 			= 		"create_group";
-	/** 客户端发送的添加群成员请求 */
+	*//** 客户端发送的添加群成员请求 *//*
 	String REQUEST_ADD_GROUP_MEMBER_BY_USERNAME		= 		"add_group_member_by_username";
-	/** 客户端发送的添加群成员请求 */
+	*//** 客户端发送的添加群成员请求 *//*
 	String REQUEST_ADD_GROUP_MEMBER 				= 		"add_group_member";
-	/** 客户端发送的添加多个群成员请求 */
+	*//** 客户端发送的添加多个群成员请求 *//*
 	String REQUEST_ADD_GROUP_MEMBERS		 		= 		"add_group_members";
-	/** 客户端发送的更新群名称请求 */
+	*//** 客户端发送的更新群名称请求 *//*
 	String REQUEST_UPDATE_GROUP_NAME 				= 		"update_group_name";
-	/** 客户端发送的下载多个群成员请求 */
+	*//** 客户端发送的下载多个群成员请求 *//*
 	String REQUEST_DOWNLOAD_GROUP_MEMBERS 			= 		"download_group_members";
-	/** 客户端发送的下载多个群成员请求 */
+	*//** 客户端发送的下载多个群成员请求 *//*
 	String REQUEST_DOWNLOAD_GROUP_MEMBERS_BY_LIMIT 	= 		"download_group_members_by_limit";
-	/** 客户端发送的下载多个群成员请求 */
+	*//** 客户端发送的下载多个群成员请求 *//*
 	String REQUEST_DOWNLOAD_GROUP_MEMBERS_BY_HXID 	= 		"download_group_members_by_hxid";
-	/** 客户端发送的下载多个群成员请求 */
+	*//** 客户端发送的下载多个群成员请求 *//*
 	String REQUEST_DOWNLOAD_GROUP_MEMBERS_BY_HXID_LIMIT 	= 		"download_group_members_by_hxid_limit";
-	/** 客户端发送的删除群成员请求 */
+	*//** 客户端发送的删除群成员请求 *//*
 	String REQUEST_DELETE_GROUP_MEMBER 				= 		"delete_group_member";
-	/** 客户端发送的删除多个群成员请求 */
+	*//** 客户端发送的删除多个群成员请求 *//*
 	String REQUEST_DELETE_GROUP_MEMBERS 			= 		"delete_group_members";
-	/** 客户端发送的删除群组请求 */
+	*//** 客户端发送的删除群组请求 *//*
 	String REQUEST_DELETE_GROUP 					= 		"delete_group";
-	/** 客户端发送的下载群组请求 */
+	*//** 客户端发送的下载群组请求 *//*
 	String REQUEST_DOWNLOAD_GROUPS 					= 		"download_groups";
-	/** 客户端发送的下载公开裙请求 */
+	*//** 客户端发送的下载公开裙请求 *//*
 	String REQUEST_FIND_PUBLIC_GROUPS 				= 		"download_public_groups";
-	/** 客户端发送的根据群组名称模糊查找群组请求 */
+	*//** 客户端发送的根据群组名称模糊查找群组请求 *//*
 	String REQUEST_FIND_GROUP 						= 		"find_group_by_group_name";
-	/** 客户端发送的根据群组账号查找群组请求 */
+	*//** 客户端发送的根据群组账号查找群组请求 *//*
 	String REQUEST_FIND_GROUP_BY_ID					= 		"find_group_by_group_id";
-	/** 客户端发送的根据群组环信id查找群组请求 */
+	*//** 客户端发送的根据群组环信id查找群组请求 *//*
 	String REQUEST_FIND_GROUP_BY_HXID 				= 		"find_group_by_group_hxid";
-	/** 客户端发送的根据群组环信id查找公开群组请求 */
-	String REQUEST_FIND_PUBLIC_GROUP_BY_HXID 		= 		"find_public_group_by_group_hxid";
+	*//** 客户端发送的根据群组环信id查找公开群组请求 *//*
+	String REQUEST_FIND_PUBLIC_GROUP_BY_HXID 		= 		"find_public_group_by_group_hxid";*/
     String DOWNLOAD_USER_AVATAR_URL                 =       SuperWeChatApplication.SERVER_ROOT
             +  "?" + KEY_REQUEST + "=" + REQUEST_DOWNLOAD_AVATAR + "&" + AVATAR_TYPE + "=";
-    /** 客户端发送的根据根据群组环信id下载群组头像的请求 */
+  /*  *//** 客户端发送的根据根据群组环信id下载群组头像的请求 *//*
     String DOWNLOAD_GROUP_AVATAR_URL                 =       SuperWeChatApplication.SERVER_ROOT
-            +  "?" + KEY_REQUEST + "=" + REQUEST_DOWNLOAD_GROUP_AVATAR + "&time=123" + "&" + AVATAR_TYPE + "=";
+            +  "?" + KEY_REQUEST + "=" + REQUEST_DOWNLOAD_GROUP_AVATAR + "&time=123" + "&" + AVATAR_TYPE + "=";*/
 	 String REQUEST_FIND_CHARGE = "find_charge";
     
     /** 从服务端查询精选首页的数据*/
