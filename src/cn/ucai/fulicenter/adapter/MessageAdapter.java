@@ -415,12 +415,6 @@ public class MessageAdapter extends BaseAdapter{
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		// 群聊时，显示接收的消息的发送人的名称
-		if ((chatType == ChatType.GroupChat || chatType == ChatType.ChatRoom) && message.direct == EMMessage.Direct.RECEIVE){
-		    //demo里使用username代码nick
-			UserUtils.setUserNick(message.getFrom(), holder.tv_usernick);
-			UserUtils.setGroupMemberNick(username,message.getFrom(),holder.tv_usernick);
-		}
 		if(message.direct == EMMessage.Direct.SEND){
 			UserUtils.setCurrentUserNick(holder.tv_usernick);
 		}

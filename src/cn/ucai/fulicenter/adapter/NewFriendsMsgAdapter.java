@@ -38,13 +38,11 @@ import java.util.List;
 import cn.ucai.fulicenter.I;
 import cn.ucai.fulicenter.R;
 import cn.ucai.fulicenter.activity.NewFriendsMsgActivity;
-import cn.ucai.fulicenter.bean.Group;
 import cn.ucai.fulicenter.bean.User;
 import cn.ucai.fulicenter.data.ApiParams;
 import cn.ucai.fulicenter.data.GsonRequest;
 import cn.ucai.fulicenter.db.InviteMessgeDao;
 import cn.ucai.fulicenter.domain.InviteMessage;
-import cn.ucai.fulicenter.task.DownloadAllGroupMembersTask;
 import cn.ucai.fulicenter.utils.UserUtils;
 
 public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
@@ -199,15 +197,6 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
                             }
                         });
                     }
-					else { //同意加群申请
-                        String path = new ApiParams()
-                                .with(I.Member.USER_NAME,msg.getFrom())
-                                .with(I.Member.GROUP_HX_ID,msg.getGroupId())
-                                .getRequestUrl(I.REQUEST_ADD_GROUP_MEMBER_BY_USERNAME);
-                        ((NewFriendsMsgActivity) context).executeRequest(new GsonRequest<Group>(path, Group.class,
-                                responseAddGroupMemberListener(button,msg),((NewFriendsMsgActivity) context).errorListener()));
-                        EMGroupManager.getInstance().acceptApplication(msg.getFrom(), msg.getGroupId());
-                    }
 				} catch (final Exception e) {
 					((Activity) context).runOnUiThread(new Runnable() {
 
@@ -223,38 +212,7 @@ public class NewFriendsMsgAdapter extends ArrayAdapter<InviteMessage> {
 		}).start();
 	}
 
-    private Response.Listener<Group> responseAddGroupMemberListener(final Button button,final InviteMessage msg) {
-        return new Response.Listener<Group>() {
-            @Override
-            public void onResponse(Group group) {
-                if(group!=null && group.isResult()){
-                    new DownloadAllGroupMembersTask(context,group.getMGroupHxid()).execute();
-                    try {
-                        final String str2 = context.getResources().getString(R.string.Has_agreed_to);
-                        EMGroupManager.getInstance().acceptApplication(msg.getFrom(), msg.getGroupId());
-                        ((Activity) context).runOnUiThread(new Runnable() {
 
-                            @Override
-                            public void run() {
-                                pd.dismiss();
-                                button.setText(str2);
-                                msg.setStatus(InviteMessage.InviteMesageStatus.AGREED);
-                                // 更新db
-                                ContentValues values = new ContentValues();
-                                values.put(InviteMessgeDao.COLUMN_NAME_STATUS, msg.getStatus().ordinal());
-                                messgeDao.updateMessage(msg.getId(), values);
-                                button.setBackgroundDrawable(null);
-                                button.setEnabled(false);
-
-                            }
-                        });
-                    } catch (final EaseMobException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-    }
 
     private static class ViewHolder {
 		NetworkImageView avator;

@@ -93,19 +93,19 @@
             android:windowSoftInputMode="stateVisible"
             android:theme="@style/horizontal_slide" >
         </activity>
-        <!-- 群组详情 -->
+        <!--&lt;!&ndash; 群组详情 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.GroupDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
         </activity>
-        <!-- 群组列表 -->
+        &lt;!&ndash; 群组列表 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.GroupsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >
-        </activity>
+        </activity>-->
         
         <activity
             android:name="cn.ucai.fulicenter.activity.ChatRoomActivity"
@@ -120,26 +120,26 @@
             android:theme="@style/horizontal_slide" >
         </activity>
         
-        <!-- 新建群组 -->
+        <!--&lt;!&ndash; 新建群组 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.NewGroupActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-        <!-- 退出群组提示框 -->
+        &lt;!&ndash; 退出群组提示框 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.ExitGroupDialog"
             android:screenOrientation="portrait"
             android:theme="@style/MyDialogStyleBottom" >
         </activity>
-        <!-- 群组选人 -->
+        &lt;!&ndash; 群组选人 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.GroupPickContactsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >
-        </activity>
+        </activity>-->
         <!-- 地图 -->
         <activity
             android:name="cn.ucai.fulicenter.activity.BaiduMapActivity"
@@ -191,13 +191,13 @@
             android:theme="@style/horizontal_slide" >
         </activity>
 
-        <!-- 公开的群聊列表 -->
+       <!-- &lt;!&ndash; 公开的群聊列表 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.PublicGroupsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
             android:windowSoftInputMode="adjustPan" >
-        </activity>
+        </activity>-->
         
         <activity
             android:name="cn.ucai.fulicenter.activity.PublicChatRoomsActivity"
@@ -221,13 +221,13 @@
             android:launchMode="singleTask"
             android:theme="@style/horizontal_slide" >
         </activity>
-        <!-- 群聊简单信息 -->
+        <!--&lt;!&ndash; 群聊简单信息 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.GroupSimpleDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
         </activity>
-        <!-- 群组黑名单用户列表 -->
+        &lt;!&ndash; 群组黑名单用户列表 &ndash;&gt;
         <activity
             android:name="cn.ucai.fulicenter.activity.GroupBlacklistActivity"
             android:screenOrientation="portrait"
@@ -237,7 +237,7 @@
             android:name="cn.ucai.fulicenter.activity.PublicGroupsSeachActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" >
-        </activity>
+        </activity>-->
         <activity
             android:name="cn.ucai.fulicenter.activity.EditActivity"
             android:screenOrientation="portrait"
